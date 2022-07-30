@@ -36,3 +36,24 @@
   overflow: hidden;
 }
 
+@media screen and (max-width: 1168px) {
+  .AppGlass {
+    /*background-color: gray;*/
+    grid-template-columns: 10% 50% auto;
+    overflow-y: scroll;
+  }
+}
+
+
+@media screen and (max-width: 714px) {
+
+
+  .AppGlass {
+    /*background-color: gray;*/
+    grid-template-columns: 1fr;
+    overflow-y: scroll;
+  }
+  .AppGlass::-webkit-scrollbar{
+    display: none;
+  }
+}

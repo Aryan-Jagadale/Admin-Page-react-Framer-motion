@@ -10,9 +10,26 @@ import { useState } from "react";
 
 const Sidebar = () => {
   const [selected, setSelected] = useState(0)
+  const [expanded, setExpanded] = useState(true)
+
+  const sidebarVariants = {
+    true: {
+      left : '0'
+    },
+    false:{
+      left : '-60%'
+    }
+  }
 
   return (
-    <div className="sidebar">
+    <>
+    <div className="bars" style={expanded?{left: '60%'}:{left: '5%'}} onClick={()=>setExpanded(!expanded)}>
+        <UilBars />
+      </div>
+    <motion.div className="sidebar"
+    variants={sidebarVariants}
+    animate={window.innerWidth<=714?`${expanded}`:''}
+    >
       {/*Logo */}
       <div className="logo">
         <img src={logo} alt="logo" />
@@ -39,7 +56,9 @@ const Sidebar = () => {
           <UilSignOutAlt />
         </div>
       </div>
-    </div>
+    </motion.div>
+    </>
+    
   );
 };
 
