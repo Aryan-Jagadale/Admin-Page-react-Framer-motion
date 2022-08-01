@@ -12,12 +12,17 @@
 }
 .App{
   color: var(--black);
-  background: linear-gradient(
+  /*background: linear-gradient(
     106.37deg,
     #ffe1bc 29.63%,
     #ffcfd1 51.55%,
     #f3c6f1 90.85%
-  );
+  );*/
+  /*background: linear-gradient(148.37deg, #8602D2 2.35%, #10EAF0 74.2%);*/
+  background: linear-gradient(148.37deg, #10EAF0 2.35%,#8602D2 74.2%);
+
+
+
   height: 100vh;
   display: flex;
   align-items: center;
